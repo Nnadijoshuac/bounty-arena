@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0c0b09;
+  --color-panel: #14120f;
+  --color-raised: #1b1814;
+  --color-line: #29241d;
+  --color-line-strong: #3a3329;
+  --color-fg: #f1eae0;
+  --color-muted: #a39a8c;
+  --color-faint: #6f675b;
+  --color-brass: #e8b04b;
+  --color-brass-deep: #b98524;
+  --color-human: #f08a5d;
+  --color-agent: #6fc3d6;
+  --color-good: #93c47d;
+  --color-bad: #e5675a;
+
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-ink text-fg font-sans antialiased;
+    font-feature-settings: "ss01", "cv11";
+    background-image:
+      radial-gradient(1200px 500px at 15% -10%, rgba(232, 176, 75, 0.07), transparent 60%),
+      radial-gradient(900px 400px at 100% 0%, rgba(111, 195, 214, 0.05), transparent 60%);
+    background-attachment: fixed;
+  }
+  ::selection {
+    background: rgba(232, 176, 75, 0.35);
+  }
+  input,
+  textarea,
+  select {
+    @apply bg-ink border border-line rounded-[3px] px-3 py-2 text-fg placeholder:text-faint outline-none transition-colors;
+  }
+  input:focus,
+  textarea:focus,
+  select:focus {
+    @apply border-brass/70;
+  }
+  :focus-visible {
+    outline: 1px solid var(--color-brass);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply bg-panel border border-line rounded-[4px];
+  }
+  .label {
+    @apply font-mono text-[11px] uppercase tracking-[0.14em] text-faint;
+  }
+  .num {
+    @apply font-mono tabular-nums;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-[3px] px-4 py-2 text-sm font-medium transition-colors disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer;
+  }
+  .btn-primary {
+    @apply bg-brass text-ink hover:bg-[#f2c062];
+  }
+  .btn-ghost {
+    @apply border border-line-strong text-fg hover:border-brass/60 hover:text-brass;
+  }
+  .btn-quiet {
+    @apply px-2 py-1 text-muted hover:text-fg;
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, rgba(241, 234, 224, 0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(241, 234, 224, 0.035) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  .ticks {
+    position: relative;
+  }
+  .ticks::before,
+  .ticks::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-color: var(--color-brass);
+    opacity: 0.7;
+    pointer-events: none;
+  }
+  .ticks::before {
+    top: -1px;
+    left: -1px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+  }
+  .ticks::after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+  }
+  .prose-spec h1 {
+    @apply font-display text-xl text-fg mb-3;
+  }
+  .prose-spec h2,
+  .prose-spec h3 {
+    @apply font-display text-base text-fg mt-5 mb-2;
+  }
+  .prose-spec p {
+    @apply text-muted leading-relaxed my-2;
+  }
+  .prose-spec ul {
+    @apply my-2 space-y-1;
+  }
+  .prose-spec li {
+    @apply text-muted leading-relaxed pl-4 relative;
+  }
+  .prose-spec li::before {
+    content: "";
+    @apply absolute left-0 top-[0.7em] w-1.5 h-px bg-brass;
+  }
+  .prose-spec code {
+    @apply font-mono text-[0.85em] text-fg bg-raised px-1 py-0.5 rounded-[2px];
+  }
+  .prose-spec .lead {
+    @apply text-fg font-medium mt-4;
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+.live-dot {
+  animation: pulse-dot 2.4s ease-in-out infinite;
+}

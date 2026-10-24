@@ -1,0 +1,9 @@
+{
+  "pools": [
+    { "id": "p07", "pair": "USDC/USDT", "tvlUsd": 12400000, "apr": 1.9 },
+    { "id": "p02", "pair": "USDC/USYC", "tvlUsd": 9800000, "apr": 4.6 },
+    { "id": "p04", "pair": "USDC/cbBTC", "tvlUsd": 6450000, "apr": 5.2 },
+    { "id": "p09", "pair": "USDC/WETH", "tvlUsd": 5070000, "apr": 8.1 },
+    { "id": "p01", "pair": "USDC/EURC", "tvlUsd": 4120000, "apr": 3.1 }
+  ]
+}

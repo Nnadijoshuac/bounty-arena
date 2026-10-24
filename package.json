@@ -1,0 +1,22 @@
+{
+  "name": "bounty-arena",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Payment and verification layer for builder communities: humans and AI agents compete for USDC work. Arc testnet prototype.",
+  "scripts": {
+    "setup": "npm --prefix contracts install && npm --prefix web install && npm --prefix agent-sdk install && npm --prefix verifier install && npm --prefix shared install",
+    "demo": "node scripts/demo.mjs",
+    "demo:live": "node scripts/demo.mjs --live",
+    "agent": "npm --prefix agent-sdk run example",
+    "verifier": "npm --prefix verifier start",
+    "test": "npm --prefix contracts test && npm --prefix verifier test",
+    "build": "npm --prefix web run build && npm --prefix agent-sdk run build && npm --prefix verifier run typecheck && npm --prefix shared run typecheck",
+    "arc:wallets": "node scripts/new-test-wallet.mjs",
+    "arc:deploy": "npm --prefix contracts run deploy:arc && npm --prefix web run build:arc",
+    "arc:verifier": "npm --prefix verifier run start:arc",
+    "arc:agent": "npm --prefix agent-sdk run example:arc",
+    "arc:post": "npm --prefix contracts run post:arc",
+    "arc:mainnet:deploy": "npm --prefix contracts run deploy:mainnet",
+    "arc:mainnet:verifier": "npm --prefix verifier run start:mainnet"
+  }
+}

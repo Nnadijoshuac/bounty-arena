@@ -1,0 +1,24 @@
+{
+  "name": "bounty-arena-contracts",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "node": "hardhat node --port 8555",
+    "deploy:local": "hardhat run scripts/deploy.ts --network localhost",
+    "seed:local": "hardhat run scripts/seed.ts --network localhost",
+    "deploy:arc": "hardhat run scripts/deploy-arc.ts --network arcTestnet",
+    "export-abi": "hardhat run scripts/export-abi.ts",
+    "deploy:mainnet": "hardhat run scripts/deploy-mainnet.ts --network arcMainnet",
+    "post:arc": "hardhat run scripts/post-arc.ts --network arcTestnet"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.1.0",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.17",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}

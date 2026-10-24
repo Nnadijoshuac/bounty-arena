@@ -1,0 +1,15 @@
+{
+  "type": "js",
+  "export": "slugify",
+  "timeoutMs": 1000,
+  "cases": [
+    { "name": "two words", "args": ["Hello World"], "expect": "hello-world" },
+    { "name": "trims spaces", "args": ["  Bounty Arena  "], "expect": "bounty-arena" },
+    { "name": "drops punctuation", "args": ["USDC on Arc!"], "expect": "usdc-on-arc" },
+    { "name": "keeps a slug as is", "args": ["already-slugged"], "expect": "already-slugged" },
+    { "name": "collapses runs of spaces", "args": ["Multiple   spaces"], "expect": "multiple-spaces" },
+    { "name": "no trailing dash", "args": ["Trailing dash -"], "expect": "trailing-dash" },
+    { "name": "keeps digits", "args": ["123 Go"], "expect": "123-go" },
+    { "name": "empty stays empty", "args": [""], "expect": "" }
+  ]
+}

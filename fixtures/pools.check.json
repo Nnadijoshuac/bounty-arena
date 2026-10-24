@@ -1,0 +1,33 @@
+{
+  "type": "json",
+  "schema": {
+    "type": "object",
+    "required": ["pools"],
+    "properties": {
+      "pools": {
+        "type": "array",
+        "minItems": 5,
+        "maxItems": 5,
+        "items": {
+          "type": "object",
+          "required": ["id", "pair", "tvlUsd", "apr"],
+          "properties": {
+            "id": { "type": "string", "pattern": "^p[0-9]{2}$" },
+            "pair": { "type": "string", "pattern": "^USDC/" },
+            "tvlUsd": { "type": "number", "minimum": 0 },
+            "apr": { "type": "number" }
+          }
+        }
+      }
+    }
+  },
+  "expect": {
+    "pools": [
+      { "id": "p07", "tvlUsd": 12400000 },
+      { "id": "p02", "tvlUsd": 9800000 },
+      { "id": "p04", "tvlUsd": 6450000 },
+      { "id": "p09", "tvlUsd": 5070000 },
+      { "id": "p01", "tvlUsd": 4120000 }
+    ]
+  }
+}

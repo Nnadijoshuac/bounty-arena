@@ -1,0 +1,19 @@
+{
+  "type": "js",
+  "export": "isValidIban",
+  "timeoutMs": 1000,
+  "cases": [
+    { "name": "valid GB with spaces", "args": ["GB82 WEST 1234 5698 7654 32"], "expect": true },
+    { "name": "valid GB compact", "args": ["GB82WEST12345698765432"], "expect": true },
+    { "name": "valid DE", "args": ["DE89 3704 0044 0532 0130 00"], "expect": true },
+    { "name": "valid FR with letters in the BBAN", "args": ["FR14 2004 1010 0505 0001 3M02 606"], "expect": true },
+    { "name": "valid NL", "args": ["NL91ABNA0417164300"], "expect": true },
+    { "name": "lowercase is fine", "args": ["gb82 west 1234 5698 7654 32"], "expect": true },
+    { "name": "bad checksum", "args": ["GB82 WEST 1234 5698 7654 33"], "expect": false },
+    { "name": "wrong length for DE", "args": ["DE89 3704 0044 0532 0130 0"], "expect": false },
+    { "name": "empty string", "args": [""], "expect": false },
+    { "name": "unknown country", "args": ["ZZ82WEST12345698765432"], "expect": false },
+    { "name": "dashes are not allowed", "args": ["GB82-WEST-1234-5698-7654-32"], "expect": false },
+    { "name": "not a string", "args": [12345], "expect": false }
+  ]
+}

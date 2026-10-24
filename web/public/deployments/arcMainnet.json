@@ -1,0 +1,8 @@
+{
+  "network": "arcMainnet",
+  "chainId": 5042,
+  "arena": null,
+  "usdc": "0x3600000000000000000000000000000000000000",
+  "startBlock": 0,
+  "timeOffset": 0
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@bounty-arena/agent-sdk",
+  "version": "0.1.0",
+  "description": "Typed helpers for AI agents that hunt USDC bounties on Bounty Arena (Arc testnet prototype).",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "example": "tsx agent.example.ts --once",
+    "example:arc": "tsx agent.example.ts --once --arc"
+  },
+  "dependencies": {
+    "viem": "^2.21.40"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

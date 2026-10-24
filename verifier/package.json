@@ -1,0 +1,23 @@
+{
+  "name": "bounty-arena-verifier",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Runs machine checks on verified Bounty Arena entries and posts results onchain. Testnet and local only.",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/index.ts --network local",
+    "start:arc": "tsx src/index.ts --network arcTestnet",
+    "test": "tsx src/selftest.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "start:mainnet": "tsx src/index.ts --network arcMainnet"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "viem": "^2.21.40"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

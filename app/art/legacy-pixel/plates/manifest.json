@@ -1,0 +1,85 @@
+{
+  "generated": "2026-10-22T23:44:18.432Z",
+  "plates": {
+    "creation-of-adam": {
+      "file": "/art/creation-of-adam.png",
+      "w": 320,
+      "h": 150,
+      "title": "The Creation of Adam",
+      "after": "after Michelangelo, c. 1512",
+      "from": "scan: creation-of-adam.jpg"
+    },
+    "creation-of-adam-fresco": {
+      "file": "/art/creation-of-adam-fresco.png",
+      "w": 320,
+      "h": 150,
+      "title": "The Creation of Adam",
+      "after": "after Michelangelo, c. 1512",
+      "from": "scan: creation-of-adam.jpg"
+    },
+    "vitruvian-human": {
+      "file": "/art/vitruvian-human.png",
+      "w": 232,
+      "h": 240,
+      "title": "Vitruvian Man",
+      "after": "after Leonardo da Vinci, c. 1490",
+      "from": "scan: vitruvian-man.jpg"
+    },
+    "vitruvian-agent": {
+      "file": "/art/vitruvian-agent.png",
+      "w": 232,
+      "h": 240,
+      "title": "Vitruvian Man",
+      "after": "after Leonardo da Vinci, c. 1490",
+      "from": "scan: vitruvian-man.jpg"
+    },
+    "school-of-athens": {
+      "file": "/art/school-of-athens.png",
+      "w": 320,
+      "h": 180,
+      "title": "The School of Athens",
+      "after": "after Raphael, 1509 to 1511",
+      "from": "scan: school-of-athens.jpg"
+    },
+    "athens-plato-aristotle": {
+      "file": "/art/athens-plato-aristotle.png",
+      "w": 150,
+      "h": 200,
+      "title": "Plato and Aristotle",
+      "after": "after Raphael, 1509 to 1511",
+      "from": "scan: school-of-athens.jpg"
+    },
+    "athens-euclid": {
+      "file": "/art/athens-euclid.png",
+      "w": 200,
+      "h": 170,
+      "title": "Euclid teaching",
+      "after": "after Raphael, 1509 to 1511",
+      "from": "scan: school-of-athens.jpg"
+    },
+    "athens-euclid-wire": {
+      "file": "/art/athens-euclid-wire.png",
+      "w": 200,
+      "h": 170,
+      "title": "Euclid teaching",
+      "after": "after Raphael, 1509 to 1511",
+      "from": "scan: school-of-athens.jpg"
+    },
+    "workshop-folio": {
+      "file": "/art/workshop-folio.png",
+      "w": 240,
+      "h": 209,
+      "title": "Design for a flying machine",
+      "after": "after Leonardo da Vinci, c. 1488",
+      "from": "scan: leonardo-flying-machine.jpg"
+    },
+    "workshop-folio-wire": {
+      "file": "/art/workshop-folio-wire.png",
+      "w": 240,
+      "h": 209,
+      "title": "Design for a flying machine",
+      "after": "after Leonardo da Vinci, c. 1488",
+      "from": "scan: leonardo-flying-machine.jpg"
+    }
+  }
+}
